@@ -1,4 +1,4 @@
-package com.example.seminar2
+package com.example.seminar1
 
 import org.junit.Test
 
