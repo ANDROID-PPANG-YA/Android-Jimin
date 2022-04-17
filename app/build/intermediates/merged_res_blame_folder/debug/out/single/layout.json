@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sign_in.xml",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_blank.xml",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\src\\main\\res\\layout\\fragment_blank.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sign_up.xml",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sample.xml",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar1\\app\\src\\main\\res\\layout\\activity_sample.xml"
+    }
+]
