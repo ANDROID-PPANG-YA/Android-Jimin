@@ -13,14 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c489829-060a-422c-a804-a08beff5942c" name="Default Changelist" comment="Merge branch 'seminar2' of https://github.com/ANDROID-PPANG-YA/Android-Jimin into seminar2">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Seminar1.app.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seminar2/.idea/vcs.xml" afterDir="false" />
     </list>
     <list id="0f4768e6-a1b4-4992-b691-e0c9c759fea8" name="Revert &quot;feat : 아이템 레이아웃까지&quot;" comment="Revert &quot;feat : 아이템 레이아웃까지&quot;&#10;&#10;This reverts commit bd094264" />
-    <list id="f73bdc8d-568c-4fc7-bdc6-ca140e30f92c" name="Revert &quot;feat : 아이템 레이아웃까지&quot;-2" comment="Revert &quot;feat : 아이템 레이아웃까지&quot;&#10;&#10;This reverts commit bd094264">
-      <change beforePath="$PROJECT_DIR$/seminar2/app/src/main/java/com/example/seminar1/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/seminar1/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seminar2/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
-    </list>
+    <list id="f73bdc8d-568c-4fc7-bdc6-ca140e30f92c" name="Revert &quot;feat : 아이템 레이아웃까지&quot;-2" comment="Revert &quot;feat : 아이템 레이아웃까지&quot;&#10;&#10;This reverts commit bd094264" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,12 +37,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Seminar1" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -71,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/seminar2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Seminar2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
