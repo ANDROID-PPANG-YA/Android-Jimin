@@ -10,11 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Seminar1">
         <activity
-            android:name=".FollowerAdapter"
+            android:name="com.example.seminar2.RepositoryAdapter"
             android:exported="false" />
         <activity
-            android:name=".SampleActivity"
+            android:name="com.example.seminar2.FollowerAdapter"
             android:exported="false" />
+
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />

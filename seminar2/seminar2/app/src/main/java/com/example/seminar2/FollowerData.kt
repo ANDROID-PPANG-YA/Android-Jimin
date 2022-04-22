@@ -1,6 +1,6 @@
 package com.example.seminar1
 
-data class UserData(
-    val name : String
+data class FollowerData(
+    val name : String,
     val introduce : String
 )
