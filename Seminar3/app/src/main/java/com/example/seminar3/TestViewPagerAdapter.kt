@@ -10,9 +10,9 @@ class TestViewPagerAdapter(fragmentActivity: FragmentActivity) :
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment = when (position) {
-        0 -> Fragment1()
-        1 -> Fragment2()
-        2 -> Fragment3()
+        0 -> ProfileFragment()
+        1 -> HomeFragment()
+        2 -> CameraFragment()
         else -> throw Exception()
     }
 

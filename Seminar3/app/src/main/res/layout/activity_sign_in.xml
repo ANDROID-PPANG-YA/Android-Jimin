@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <Button
+        android:id="@+id/buttonSi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="216dp"
+        android:background="#8b00ff"
+        android:text="@string/LOGIN"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        />
+
+    <Button
+        android:id="@+id/buttonSu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#81c147"
+        android:text="@string/회원가입"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/buttonSi"
+        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="@string/sopt"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textview_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/아이디"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginStart="15dp"
+        />
+
+    <TextView
+        android:id="@+id/textview_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/비밀번호"
+        android:textSize="20sp"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <EditText
+        android:id="@+id/editId"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="50dp"
+        android:inputType="text"
+        android:hint="@string/input_id"
+        android:importantForAutofill="no"
+
+        app:layout_constraintTop_toBottomOf="@+id/textview_id"
+        />
+
+    <EditText
+        android:id="@+id/editPw"
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:hint="@string/input_pw"
+        android:importantForAutofill="no"
+
+        app:layout_constraintTop_toBottomOf="@+id/textview_pw"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

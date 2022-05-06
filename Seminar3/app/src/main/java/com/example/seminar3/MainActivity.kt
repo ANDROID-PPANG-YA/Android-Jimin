@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initAdapter() {
+        val
         testViewPagerAdapter = TestViewPagerAdapter(this)
 
         binding.vpMain.adapter = testViewPagerAdapter
@@ -33,11 +34,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.bnvMain.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.menu_android -> {
+                R.id.menu_profile -> {
                     binding.vpMain.currentItem = FIRST_FRAGMENT
                     return@setOnItemSelectedListener true
                 }
-                R.id.menu_list -> {
+                R.id.menu_home -> {
                     binding.vpMain.currentItem = SECOND_FRAGMENT
                     return@setOnItemSelectedListener true
                 }

@@ -9,7 +9,9 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnv_main"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_main"
@@ -19,6 +21,7 @@
         app:itemIconTint="@color/selector_bottom_navi"
         app:itemRippleColor="#6424D5"
         app:itemTextColor="@color/selector_bottom_navi"
-        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_sample"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
