@@ -1,12 +1,12 @@
-package com.example.seminar3
+package com.example.seminar3.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.seminar1.FollowerData
-import com.example.seminar2.FollowerAdapter
+import com.example.seminar3.DataClass.FollowerData
+import com.example.seminar3.Adapter.FollowerAdapter
 import com.example.seminar3.databinding.FragmentFollowerBinding
 
 class FollowerFragment : Fragment() {

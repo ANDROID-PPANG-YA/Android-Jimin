@@ -1,8 +1,10 @@
-package com.example.seminar3
+package com.example.seminar3.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
+import com.example.seminar3.R
+import com.example.seminar3.Adapter.TestViewPagerAdapter
 import com.example.seminar3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

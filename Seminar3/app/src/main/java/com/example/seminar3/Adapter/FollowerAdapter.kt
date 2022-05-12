@@ -1,9 +1,9 @@
-package com.example.seminar2
+package com.example.seminar3.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.seminar1.FollowerData
+import com.example.seminar3.DataClass.FollowerData
 import com.example.seminar3.databinding.FollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewHolder>() {

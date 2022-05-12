@@ -1,7 +1,9 @@
-package com.example.seminar3
+package com.example.seminar3.Adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.seminar3.Fragment.TabFragment2
+import com.example.seminar3.Fragment.TapFragment1
 
 class SampleTabViewPagerAdapter(fragment: Fragment):
     FragmentStateAdapter(fragment) {

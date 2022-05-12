@@ -1,4 +1,4 @@
-package com.example.seminar2
+package com.example.seminar3.DataClass
 
 data class RepositoryData(
     val reponame : String,
