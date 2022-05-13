@@ -1,11 +1,11 @@
-package com.example.seminar3.Fragment
+package com.example.seminar3.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.seminar3.Adapter.SampleTabViewPagerAdapter
+import com.example.seminar3.adapter.SampleTabViewPagerAdapter
 import com.example.seminar3.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

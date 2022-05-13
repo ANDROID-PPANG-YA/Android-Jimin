@@ -1,12 +1,12 @@
-package com.example.seminar3.Activity
+package com.example.seminar3.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.seminar3.DataClass.RequestSignIn
-import com.example.seminar3.DataClass.ResponseSignIn
+import com.example.seminar3.dataclass.RequestSignIn
+import com.example.seminar3.dataclass.ResponseSignIn
 import com.example.seminar3.ServiceCreator
 import com.example.seminar3.databinding.ActivitySignInBinding
 import retrofit2.Call
@@ -22,6 +22,12 @@ class SignInActivity : AppCompatActivity() {
 
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val suIntent = Intent(this, SignUpActivity::class.java)
+
+        binding.buttonSu.setOnClickListener{
+            startActivity(suIntent)
+        }
 
         initEvent()
     }
@@ -62,5 +68,6 @@ class SignInActivity : AppCompatActivity() {
                 Log.e("NetworkTest", "error:$t")
             }
         })
+
     }
 }

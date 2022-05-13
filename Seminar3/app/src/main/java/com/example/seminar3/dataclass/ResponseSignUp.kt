@@ -1,4 +1,4 @@
-package com.example.seminar3.DataClass
+package com.example.seminar3.dataclass
 
 data class ResponseSignUp(
     val status: Int,
@@ -6,7 +6,6 @@ data class ResponseSignUp(
     val data: Data
 ) {
     data class Data(
-        val name: String,
-        val email: String
+        val id: Int
     )
 }
