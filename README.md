@@ -365,3 +365,134 @@ private fun initTransactionEvent() {
   💡 ViewHolder를 활용해 편리하게 반복되는 레이아웃을 재사용하기<br>
   💡 여러 개의 fragment 전환하기<br>
   💡 Fragment View의 생명주기가 Fragmnet의 생명주기보다 짧기 때문에 발생할 수 있는 메모리 누수 방지하는 방법(binding 활용) 
+
+* * *
+
+# 🌱Seminar 3<br>
+
+💦 군데군데 이상한 곳이 있습니다..
+
+- TapFragment1에서 Tab 오타로 Tap이 되었는데, 이름을 바꿨을 때 듬성듬성 적용 안 되는 곳들이 있어서 일단 오타를 유지하게 되었습니다
+
+-  새로운 파일에서 만들다가 리사이클러뷰를 누락한 것 같아요
+
+- 리스트 이미지도 둥글게 만들기, 홈화면 '준비중입니다' 문구 위치 수정이 필요합니다
+
+계속 수정해보겠습니다ㅠㅠ
+
+
+
+## 1️⃣ Level 1 실행화면
+
+<img src="https://user-images.githubusercontent.com/92876819/167154544-abf11337-1b00-4b9d-b2e0-ce68a2035a4f.gif" width="200" height="400"/>
+
+
+
+## 2️⃣ 코드 설명
+
+### **1. Profile Fragment**
+
+ 
+
+#### profile_fragment.xml
+
+```kotlin
+
+   <androidx.appcompat.widget.AppCompatButton //색깔 변화 주기 위해서
+
+    android:id="@+id/btn_repository"
+    android:layout_width="163dp"
+    android:layout_height="wrap_content"
+    android:text="@string/repo_list"
+    android:layout_marginTop="44dp"
+    android:background="@drawable/select_btn"
+    android:textColor="@color/selector_bottom_navi"//색깔 변화 설정
+    android:fontFamily="@font/noto_sans_kr_medium" //폰트 적용
+    android:paddingStart="34dp"// padding 이용해서 디자인하기
+    android:paddingEnd="35dp"
+    android:paddingTop="13dp"
+    android:paddingBottom="13dp"
+    app:layout_constraintStart_toEndOf="@id/btn_follower"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_instagram"
+    />
+```
+
+#### ProfileFragment.kt
+
+```kotlin
+
+_binding = FragmentProfileBinding.inflate(layoutInflater,container,false)
+
+    binding.btnFollower.isSelected = true //처음에 팔로워 버튼이 선택되어 있도록 설정
+    binding.btnRepository.isSelected = false
+    initTransactionFragment()
+    initImage()
+
+    return binding.root
+}
+
+private fun initImage() {
+    Glide.with(this)
+        .load(R.drawable.photo)
+        .circleCrop()//사진 원 모양으로 만들기
+        .into(binding.ivPhoto)
+}
+```
+
+ ```kotlin
+
+private fun initTransactionFragment() {
+    val fragment1 = FollowerFragment()
+    val fragment2 = RepositoryFragment()
+
+    childFragmentManager.beginTransaction().add(R.id.fragment_profile, fragment1).commit() //fragment 안에서 또다른 fragment 전환을 하려면 support이 아닌 childFragmentManager 사용
+```
+```kotlin
+binding.btnRepository.setOnClickListener {
+    val transaction = childFragmentManager.beginTransaction()
+    binding.btnRepository.isSelected = true
+    binding.btnFollower.isSelected = false
+    transaction.replace(R.id.fragment_profile, fragment2)
+    transaction.commit()
+}
+```
+
+
+### ** 2. Home Fragment**
+
+  - TabLayout, ViewPager2 적용하기
+
+
+
+- #### fragment_home.xml
+
+```kotlin
+
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tl_fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/tv_github"
+    app:tabIndicatorColor="@color/purple_200" //인디케이터 색상 설정
+    />
+
+<androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/vp_fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:paddingTop="156dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tl_fragment_home"
+    />
+```
+
+
+
+## 3️⃣ 과제를 통해 배운 내용
+
+  💡 Fragment 깔끔하게 관리하기<br>
+
+  💡 Fragment 안의 Fragment를 전환하기 위해 childFragmentManager 사용하기<br>
+
+  💡 figma에서 주어진 정보를 활용해 padding, margin 등을 설정해서 디자인하는 연습 
