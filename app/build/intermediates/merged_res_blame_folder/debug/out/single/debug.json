@@ -8,12 +8,12 @@
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_medium.otf"
     },
     {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_pale_round_btn.xml.flat",
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\pale_round_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_follower.xml.flat",
@@ -128,16 +128,16 @@
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_home.xml"
     },
     {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_select_btn.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\select_btn.xml"
+    },
+    {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_select_btn.xml.flat",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\select_btn.xml"
     },
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_follower_list.xml.flat",

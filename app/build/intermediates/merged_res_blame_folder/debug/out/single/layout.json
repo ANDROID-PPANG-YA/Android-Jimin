@@ -4,24 +4,16 @@
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_camera.xml"
     },
     {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab2.xml",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_tab2.xml"
-    },
-    {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\follower_list.xml",
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\follower_list.xml"
     },
     {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_text_view_page_adapter.xml",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_text_view_page_adapter.xml"
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab2.xml",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_tab2.xml"
     },
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_2.xml",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_2.xml"
     },
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
@@ -50,14 +42,6 @@
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tab1.xml",
         "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_tab1.xml"
-    },
-    {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_3.xml",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_3.xml"
-    },
-    {
-        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_1.xml",
-        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_1.xml"
     },
     {
         "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
