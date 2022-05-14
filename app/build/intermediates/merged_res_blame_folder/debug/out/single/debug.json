@@ -1,0 +1,202 @@
+[
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_sample.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\menu\\menu_sample.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr_medium.otf.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_medium.otf"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_pale_round_btn.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\pale_round_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_follower.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_follower.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_repository.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_repository.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_in.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_camera.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_android.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_android.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_tab1.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_tab1.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr_bold.otf.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_bold.otf"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_setting.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_img_github.png.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\img_github.png"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_repository_list.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\repository_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn_rectangle_radius5.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\btn_rectangle_radius5.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr_thin.otf.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_thin.otf"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr_regular.otf.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_regular.otf"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_list.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_shape_edit.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\shape_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_select_btn.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\select_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_follower_list.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\follower_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr_light.otf.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_light.otf"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_shape_unselect_edit.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\shape_unselect_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\color_selector_bottom_navi.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\color\\selector_bottom_navi.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_photo.jpg.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\photo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_white_round_btn.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\white_round_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\font_noto_sans_kr_black.otf.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\font\\noto_sans_kr_black.otf"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_tab2.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\layout\\fragment_tab2.xml"
+    },
+    {
+        "merged": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\aliya\\AndroidStudioProjects\\Seminar3\\app\\src\\main\\res\\drawable\\ic_camera.xml"
+    }
+]
