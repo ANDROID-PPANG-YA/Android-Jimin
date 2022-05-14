@@ -447,7 +447,7 @@ binding.btnRepository.setOnClickListener {
 ```
 
 
-### ** 2. Home Fragment**
+### **2. Home Fragment**
 
   - TabLayout, ViewPager2 적용하기
 
@@ -498,24 +498,23 @@ binding.btnRepository.setOnClickListener {
 |:------:|:---:|:---:|
 |<img src="https://user-images.githubusercontent.com/92876819/168263042-856f36cc-3fa2-469a-a104-fc07ab7935c8.gif" width="200" height="400"/>|<img src = "https://user-images.githubusercontent.com/92876819/168263232-c1d98aa5-62b5-471f-81ca-3fe3bbec160a.gif" width="200" height="400"/>||
 |회원가입 |로그인||
-||||
 
 
 ## 2️⃣ 코드 설명
-### **1. 로그인**
-- POSTMAN으로 Request에 대한 Response Body 값 확인<br><br>
-<img src="https://user-images.githubusercontent.com/92876819/168266220-ba656c3b-aeeb-4bbb-ad31-c3d9036dea00.PNG" width="400" height="300"/>
+### **1. 로그인**<br>
+#### **POSTMAN으로 Request에 대한 Response Body 값 확인**<br>
+<img src="https://user-images.githubusercontent.com/92876819/168266220-ba656c3b-aeeb-4bbb-ad31-c3d9036dea00.PNG" width="400" height="300"/><br><br>
 
-- JSON 값 참고해서 데이터 클래스 만들어주기
-- #### RequestSignIn.kt
+#### **JSON 값 참고해서 데이터 클래스 만들어주기**
+- **RequestSignIn.kt**
 ```kotlin
 data class RequestSignIn (
-    @SerializedName("email")
+    @SerializedName("email") //Json 키값과 데이터 클래스 변수명을 다르게 할 때
     val id: String,
     val password: String
     )
 ```
-- #### ResponseSignIn.kt
+- **ResponseSignIn.kt**
 ```kotlin
 data class ResponseSignIn(
     val status: Int,
@@ -530,11 +529,11 @@ data class ResponseSignIn(
 ```
 
 ### **2. 회원가입**
-- POSTMAN으로 Request에 대한 Response Body 값 확인<br><br>
-<img src="https://user-images.githubusercontent.com/92876819/168267203-4fc3faa9-5e87-4921-9207-8ccdc1665c54.PNG" width="400" height="300"/>
+#### **POSTMAN으로 Request에 대한 Response Body 값 확인**<br>
+<img src="https://user-images.githubusercontent.com/92876819/168267203-4fc3faa9-5e87-4921-9207-8ccdc1665c54.PNG" width="400" height="300"/><br><br>
 
-- JSON 값 참고해서 데이터 클래스 만들어주기
-- #### RequestSignUp.kt
+#### **JSON 값 참고해서 데이터 클래스 만들어주기**
+- **RequestSignUp.kt**
 ```kotlin
 data class RequestSignUp(
     val name: String,
@@ -543,7 +542,7 @@ data class RequestSignUp(
     val password: String
 )
 ```
-- #### ResponseSignUp.kt
+- **ResponseSignUp.kt**
 ```kotlin
 data class ResponseSignUp(
     val status: Int,
@@ -554,10 +553,114 @@ data class ResponseSignUp(
         val id: Int
     )
 }
+```
 
 ### **3. Retrofit Interface 설계**
+- **SoptService.kt**
+```kotlin
+interface SoptService {
+    @POST("auth/signin")//로그인
+    fun postLogin(
+        @Body body: RequestSignIn//어노테이션으로 Requestbody 데이터 넣어주기
+    ): Call<ResponseSignIn>//Response가 객체가 Json Object라서 Call<>형태
+
+    @POST("auth/signup")//회원가입
+    fun postSignUp(
+        @Body body: RequestSignUp
+    ): Call<ResponseSignUp>
+}
+```
 
 ### **4. Retrofit Interface 실제 구현체**
+- **ServiceCreator.kt**
+```kotlin
+object ServiceCreator {
+    private const val BASE_URL = "http://13.124.62.236/"
+
+    private val retrofit: Retrofit = Retrofit.Builder()//retrofit 객체 생성
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    val soptService: SoptService = retrofit.create(SoptService::class.java)//create로 넘겨서 실제 구현체 생성
+}
+```
+### **5. CallBack 등록해서 통신 요청**
+- 로그인과 회원가입 페이지에서 통신 요청할 수 있도록 CallBack 등록하기<br><br>
+
+- **SignInActivity.kt**
+```kotlin
+    private fun loginNetwork() {
+        val requestSignIn = RequestSignIn(
+            id = binding.editId.text.toString(),
+            password = binding.editPw.text.toString()
+        )
+
+        val call: Call<ResponseSignIn> = ServiceCreator.soptService.postLogin(requestSignIn)
+
+        call.enqueue(object : Callback<ResponseSignIn> {
+            override fun onResponse(
+                call: Call<ResponseSignIn>,
+                response: Response<ResponseSignIn>
+            ) {
+                if (response.isSuccessful) {
+                    val data = response.body()?.data
+
+                    Toast.makeText(
+                        this@SignInActivity,
+                        "${data?.email}님 반갑습니다!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+                } else Toast.makeText(this@SignInActivity, "로그인에 실패하셨습니다.", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+            override fun onFailure(call: Call<ResponseSignIn>, t: Throwable) {
+                Log.e("NetworkTest", "error:$t")
+            }
+        })
+
+    }
+```
+
+- **SignUpActivity.kt**
+```kotlin
+private fun signupNetwork() {
+        val requestSignUp = RequestSignUp(
+            name = binding.EditName.text.toString(),
+            id = binding.EditId.text.toString(),
+            password = binding.EditPw.text.toString()
+        )
+
+        val call: Call<ResponseSignUp> = ServiceCreator.soptService.postSignUp(requestSignUp)
+
+        call.enqueue(object : Callback<ResponseSignUp> {
+            override fun onResponse(
+                call: Call<ResponseSignUp>,
+                response: Response<ResponseSignUp>
+            ) {
+                if(response.isSuccessful) {
+
+                    Toast.makeText(
+                        this@SignUpActivity,
+                        "회원가입 성공!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+                } else Toast.makeText(this@SignUpActivity, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onFailure(call: Call<ResponseSignUp>, t: Throwable) {
+                Log.e("NetworkTest", "error:$t")
+            }
+        }
+
+        )
+
+
+    }
+```
 
 ## 3️⃣ 과제를 통해 배운 내용
 
