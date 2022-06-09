@@ -1,11 +1,12 @@
 package com.example.seminar3.activity
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.example.seminar3.fragment.FollowerFragment
-import com.example.seminar3.fragment.RepositoryFragment
+import androidx.appcompat.app.AppCompatActivity
 import com.example.seminar3.R
 import com.example.seminar3.databinding.ActivityHomeBinding
+import com.example.seminar3.fragment.FollowerFragment
+import com.example.seminar3.fragment.RepositoryFragment
 
 class HomeActivity : AppCompatActivity() {
     private var position = FIRST_POSITION
@@ -15,7 +16,9 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         initTransactionEvent()
+        initSettingClickEvent()
     }
 
 
@@ -28,28 +31,35 @@ class HomeActivity : AppCompatActivity() {
         binding.btnFollower.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
 
-            when(position) {
+            when (position) {
                 FIRST_POSITION -> {
                     transaction.replace(R.id.fragment_home, fragment1)
                     position = SECOND_POSITION
                 }
             }
             transaction.commit()
-            }
+        }
 
         binding.btnRepository.setOnClickListener {
             val transaction = supportFragmentManager.beginTransaction()
 
-            when(position) {
+            when (position) {
                 SECOND_POSITION -> {
-                    transaction.replace(R.id.fragment_home,fragment2)
+                    transaction.replace(R.id.fragment_home, fragment2)
                     position = FIRST_POSITION
                 }
             }
             transaction.commit()
         }
 
-            }
+    }
+
+    private fun initSettingClickEvent() {
+        val Intent = Intent(this, SettingsActivity::class.java)
+        binding.ivSetting.setOnClickListener {
+            startActivity(Intent)
+        }
+    }
 
     companion object {
         const val FIRST_POSITION = 1

@@ -1,14 +1,15 @@
 package com.example.seminar3.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.seminar3.dataclass.RequestSignIn
-import com.example.seminar3.dataclass.ResponseSignIn
+import androidx.appcompat.app.AppCompatActivity
+import com.example.seminar3.SeminarSharedPreferences
 import com.example.seminar3.ServiceCreator
 import com.example.seminar3.databinding.ActivitySignInBinding
+import com.example.seminar3.dataclass.RequestSignIn
+import com.example.seminar3.dataclass.ResponseSignIn
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,25 +17,43 @@ import retrofit2.Response
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         val suIntent = Intent(this, SignUpActivity::class.java)
 
-        binding.buttonSu.setOnClickListener{
+        binding.buttonSu.setOnClickListener {
             startActivity(suIntent)
         }
 
         initEvent()
+        initClickEvent()
+        isAutoLogin()
+
+        setContentView(binding.root)
     }
 
     private fun initEvent() {
         binding.buttonSi.setOnClickListener {
             loginNetwork()
+        }
+    }
+
+    private fun initClickEvent() {
+        binding.ibCheckbox.setOnClickListener {
+            binding.ibCheckbox.isSelected = !binding.ibCheckbox.isSelected
+
+            SeminarSharedPreferences.setAutoLogin(this, binding.ibCheckbox.isSelected)
+        }
+    }
+
+    private fun isAutoLogin() {
+        if (SeminarSharedPreferences.getAutoLogin(this)) {
+            shortToast("자동로그인 되었습니다.")
+            startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+            finish()
         }
     }
 

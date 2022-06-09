@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/nav_sample">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sample"
+    app:startDestination="@id/navFragment1">
 
+    <fragment
+        android:id="@+id/navFragment1"
+        android:name="com.example.seminar3.NavFragment1"
+        android:label="fragment_nav1"
+        tools:layout="@layout/fragment_nav1">
+        <action
+            android:id="@+id/action_navFragment1_to_navFragment2"
+            app:destination="@id/navFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navFragment2"
+        android:name="com.example.seminar3.NavFragment2"
+        android:label="fragment_nav2"
+        tools:layout="@layout/fragment_nav2">
+        <action
+            android:id="@+id/action_navFragment2_to_navFragment3"
+            app:destination="@id/navFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/navFragment3"
+        android:name="com.example.seminar3.NavFragment3"
+        android:label="fragment_nav3"
+        tools:layout="@layout/fragment_nav3" />
 </navigation>
