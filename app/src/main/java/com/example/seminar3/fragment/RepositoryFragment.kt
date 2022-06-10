@@ -1,12 +1,12 @@
-package com.example.seminar1
+package com.example.seminar3.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.seminar2.RepositoryAdapter
-import com.example.seminar2.RepositoryData
+import com.example.seminar3.adapter.RepositoryAdapter
+import com.example.seminar3.dataclass.RepositoryData
 import com.example.seminar3.databinding.FragmentRepositoryBinding
 
 class RepositoryFragment : Fragment() {

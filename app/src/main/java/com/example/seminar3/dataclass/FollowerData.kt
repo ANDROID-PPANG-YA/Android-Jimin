@@ -1,4 +1,4 @@
-package com.example.seminar1
+package com.example.seminar3.dataclass
 
 data class FollowerData(
     val name : String,

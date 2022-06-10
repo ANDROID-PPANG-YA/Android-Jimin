@@ -1,8 +1,9 @@
-package com.example.seminar1
+package com.example.seminar3.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.seminar3.FollowerFragment
+import com.example.seminar3.fragment.FollowerFragment
+import com.example.seminar3.fragment.RepositoryFragment
 import com.example.seminar3.R
 import com.example.seminar3.databinding.ActivityHomeBinding
 
