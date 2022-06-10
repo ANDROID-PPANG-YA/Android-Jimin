@@ -370,18 +370,6 @@ private fun initTransactionEvent() {
 
 # 🌱Seminar 3<br>
 
-💦 군데군데 이상한 곳이 있습니다..
-
-- TapFragment1에서 Tab 오타로 Tap이 되었는데, 이름을 바꿨을 때 듬성듬성 적용 안 되는 곳들이 있어서 일단 오타를 유지하게 되었습니다
-
--  새로운 파일에서 만들다가 리사이클러뷰를 누락한 것 같아요
-
-- 리스트 이미지도 둥글게 만들기, 홈화면 '준비중입니다' 문구 위치 수정이 필요합니다
-
-계속 수정해보겠습니다ㅠㅠ
-
-
-
 ## 1️⃣ Level 1 실행화면
 
 <img src="https://user-images.githubusercontent.com/92876819/167154544-abf11337-1b00-4b9d-b2e0-ce68a2035a4f.gif" width="200" height="400"/>
@@ -459,7 +447,7 @@ binding.btnRepository.setOnClickListener {
 ```
 
 
-### ** 2. Home Fragment**
+### **2. Home Fragment**
 
   - TabLayout, ViewPager2 적용하기
 
@@ -495,4 +483,273 @@ binding.btnRepository.setOnClickListener {
 
   💡 Fragment 안의 Fragment를 전환하기 위해 childFragmentManager 사용하기<br>
 
-  💡 figma에서 주어진 정보를 활용해 padding, margin 등을 설정해서 디자인하는 연습 
+  💡 figma에서 주어진 정보를 활용해 padding, margin 등을 설정해서 디자인하는 연습
+
+* * *
+
+# 🌱Seminar 4<br>
+
+💦 뷰페이저가 적용 안 된 부분에 과제를 했는데 리드미랑 함께 수정하겠습니다!
+    성장과제도 곧 올리겠습니다,,
+    
+
+## 1️⃣ 실행화면
+|LEVEL 1|||
+|:------:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/92876819/168263042-856f36cc-3fa2-469a-a104-fc07ab7935c8.gif" width="200" height="400"/>|<img src = "https://user-images.githubusercontent.com/92876819/168263232-c1d98aa5-62b5-471f-81ca-3fe3bbec160a.gif" width="200" height="400"/>||
+|회원가입 |로그인||
+
+
+## 2️⃣ 코드 설명
+### **1. 로그인**<br>
+#### **POSTMAN으로 Request에 대한 Response Body 값 확인**<br>
+<img src="https://user-images.githubusercontent.com/92876819/168266220-ba656c3b-aeeb-4bbb-ad31-c3d9036dea00.PNG" width="400" height="300"/><br><br>
+
+#### **JSON 값 참고해서 데이터 클래스 만들어주기**
+- **RequestSignIn.kt**
+```kotlin
+data class RequestSignIn (
+    @SerializedName("email") //Json 키값과 데이터 클래스 변수명을 다르게 할 때
+    val id: String,
+    val password: String
+    )
+```
+- **ResponseSignIn.kt**
+```kotlin
+data class ResponseSignIn(
+    val status: Int,
+    val message: String,
+    val data: Data
+) {
+    data class Data(
+        val name: String,
+        val email: String
+    )
+}
+```
+
+### **2. 회원가입**
+#### **POSTMAN으로 Request에 대한 Response Body 값 확인**<br>
+<img src="https://user-images.githubusercontent.com/92876819/168267203-4fc3faa9-5e87-4921-9207-8ccdc1665c54.PNG" width="400" height="300"/><br><br>
+
+#### **JSON 값 참고해서 데이터 클래스 만들어주기**
+- **RequestSignUp.kt**
+```kotlin
+data class RequestSignUp(
+    val name: String,
+    @SerializedName("email")
+    val id: String,
+    val password: String
+)
+```
+- **ResponseSignUp.kt**
+```kotlin
+data class ResponseSignUp(
+    val status: Int,
+    val message: String,
+    val data: Data
+) {
+    data class Data(
+        val id: Int
+    )
+}
+```
+
+### **3. Retrofit Interface 설계**
+- **SoptService.kt**
+```kotlin
+interface SoptService {
+    @POST("auth/signin")//로그인
+    fun postLogin(
+        @Body body: RequestSignIn//어노테이션으로 Requestbody 데이터 넣어주기
+    ): Call<ResponseSignIn>//Response가 객체가 Json Object라서 Call<>형태
+
+    @POST("auth/signup")//회원가입
+    fun postSignUp(
+        @Body body: RequestSignUp
+    ): Call<ResponseSignUp>
+}
+```
+
+### **4. Retrofit Interface 실제 구현체**
+- **ServiceCreator.kt**
+```kotlin
+object ServiceCreator {
+    private const val BASE_URL = "http://13.124.62.236/"
+
+    private val retrofit: Retrofit = Retrofit.Builder()//retrofit 객체 생성
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    val soptService: SoptService = retrofit.create(SoptService::class.java)//create로 넘겨서 실제 구현체 생성
+}
+```
+### **5. CallBack 등록해서 통신 요청**
+- 로그인과 회원가입 페이지에서 통신 요청할 수 있도록 CallBack 등록하기<br><br>
+
+- **SignInActivity.kt**
+```kotlin
+    private fun loginNetwork() {
+        val requestSignIn = RequestSignIn(
+            id = binding.editId.text.toString(),
+            password = binding.editPw.text.toString()
+        )
+
+        val call: Call<ResponseSignIn> = ServiceCreator.soptService.postLogin(requestSignIn)
+
+        call.enqueue(object : Callback<ResponseSignIn> {
+            override fun onResponse(
+                call: Call<ResponseSignIn>,
+                response: Response<ResponseSignIn>
+            ) {
+                if (response.isSuccessful) {
+                    val data = response.body()?.data
+
+                    Toast.makeText(
+                        this@SignInActivity,
+                        "${data?.email}님 반갑습니다!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+                } else Toast.makeText(this@SignInActivity, "로그인에 실패하셨습니다.", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
+            override fun onFailure(call: Call<ResponseSignIn>, t: Throwable) {
+                Log.e("NetworkTest", "error:$t")
+            }
+        })
+
+    }
+```
+
+- **SignUpActivity.kt**
+```kotlin
+private fun signupNetwork() {
+        val requestSignUp = RequestSignUp(
+            name = binding.EditName.text.toString(),
+            id = binding.EditId.text.toString(),
+            password = binding.EditPw.text.toString()
+        )
+
+        val call: Call<ResponseSignUp> = ServiceCreator.soptService.postSignUp(requestSignUp)
+
+        call.enqueue(object : Callback<ResponseSignUp> {
+            override fun onResponse(
+                call: Call<ResponseSignUp>,
+                response: Response<ResponseSignUp>
+            ) {
+                if(response.isSuccessful) {
+
+                    Toast.makeText(
+                        this@SignUpActivity,
+                        "회원가입 성공!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+                } else Toast.makeText(this@SignUpActivity, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onFailure(call: Call<ResponseSignUp>, t: Throwable) {
+                Log.e("NetworkTest", "error:$t")
+            }
+        }
+
+        )
+
+
+    }
+```
+
+## 3️⃣ 과제를 통해 배운 내용
+
+  💡 POSTMAN으로 서버통신 해보고 Request/Response 객체 설계하기<br>
+
+  💡 동기와 비동기의 차이와 서버 통신에서 비동기를 사용하는 이유(ANR 방지)<br>
+
+  💡 Callback 등록해서 비동기 작업 이후 행동 지정하기
+  * * *
+
+# 🌱Seminar 7<br>
+## 1️⃣ 실행화면
+|LEVEL 1|Level 1|Level 2|
+|:------:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/92876819/173030351-83f8fcbd-21e4-4f26-9e64-cb3b7e47565f.gif" width="200" height="400"/>|<img src = "https://user-images.githubusercontent.com/92876819/173030445-0a519b7a-3cbd-4d23-ad39-39f34c12504c.gif" width="200" height="400"/>||
+|자동로그인 설정 |자동로그인 해제|온보딩|
+
+## 2️⃣ 코드 설명
+### **1. 자동로그인 설정**<br>
+#### **selector로 자동로그인 버튼 만들어주고 SharedPreferences 활용해서 로그인 정보 활용하기**<br>
+- SeminarSharedPreferences.kt
+```kotlin
+//자동로그인 설정하기
+    fun setAutoLogin(context: Context, value: Boolean) {
+        context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE).edit()
+            .putBoolean(AUTO_LOGIN, value)
+            .apply()
+    }
+```
+```kotlin
+//자동로그인 설정 여부 정보 가져오기
+fun getAutoLogin(context: Context): Boolean {
+        return context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
+            .getBoolean(AUTO_LOGIN, false)
+    }
+```
+- SignInActivity.kt
+```kotlin
+//자동로그인 버튼 눌렀을 때 자동로그인 설정
+    private fun initClickEvent() {
+        binding.ibCheckbox.setOnClickListener {
+            binding.ibCheckbox.isSelected = !binding.ibCheckbox.isSelected
+
+            SeminarSharedPreferences.setAutoLogin(this, binding.ibCheckbox.isSelected)
+        }
+    }
+```
+```kotlin
+//자동로그인 설정되었을 때 저장된 정보를 바탕으로 메세지 띄우고 바로 홈 화면으로 이동
+    private fun isAutoLogin() {
+        if (SeminarSharedPreferences.getAutoLogin(this)) {
+            Toast.makeText(this@SignInActivity, "자동로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+            finish()
+        }
+    }
+
+```
+
+### **2. 자동로그인 해제 설정 화면**<br>
+#### **SettingsActivity.kt를 만들어 Home에서 Intent를 통해 넘어가도록 설정**<br>**
+- **HomeActivity.kt**
+```kotlin
+//설정 버튼 누르면 SettingsActivity로 이동
+  private fun initSettingClickEvent() {
+        val Intent = Intent(this, SettingsActivity::class.java)
+        binding.ivSetting.setOnClickListener {
+            startActivity(Intent)
+        }
+    }
+```
+- **SettingsActivity.kt**
+```kotlin
+//자동로그인 해제 버튼 누르면 저장된 정보 지워서 자동로그인 해제
+    private fun isAutoLogout() {
+        binding.btnAutoOff.setOnClickListener {
+            SeminarSharedPreferences.setLogout(this)
+            Toast.makeText(this@SettingsActivity, "자동로그인이 해제되었습니다.", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@SettingsActivity, SignInActivity::class.java))
+            finish()
+        }
+    }
+```
+
+## 3️⃣ 과제를 통해 배운 내용
+
+  💡 자동로그인 해제를 구현하는 과정에서 <code>setOnClickListener</code>가 작동하지 않아 헤맸는데 <code>setContentView(R.~~~)</code>가 아닌 <code>setContentView(binding.root)</code>로 수정하자 해결됨. 바인딩뷰를 썼기 때문에 객체화된 뷰를 넘겨주어야 해서 <code>binding.root</code>를 사용해야 하는 것이라는 걸 배움.<br>
+
+  💡 SharedPreferences를 활용해 로컬 저장소의 정보를 활용하는 연습을 함.<br>
+
+  💡 SharedPreferences 파일에서 preferences 변수를 설정해서 하면 에러가 나서 변수를 없애고 직접 반환값에 <code>context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)</code> 이런 식으로 넣어주니 해결되었는데 아직 이유를 잘 모르겠다!😥
+  * * *
