@@ -669,3 +669,87 @@ private fun signupNetwork() {
   💡 동기와 비동기의 차이와 서버 통신에서 비동기를 사용하는 이유(ANR 방지)<br>
 
   💡 Callback 등록해서 비동기 작업 이후 행동 지정하기
+  * * *
+
+# 🌱Seminar 7<br>
+## 1️⃣ 실행화면
+|LEVEL 1|Level 1|Level 2|
+|:------:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/92876819/173030351-83f8fcbd-21e4-4f26-9e64-cb3b7e47565f.gif" width="200" height="400"/>|<img src = "https://user-images.githubusercontent.com/92876819/173030445-0a519b7a-3cbd-4d23-ad39-39f34c12504c.gif" width="200" height="400"/>||
+|자동로그인 설정 |자동로그인 해제|온보딩|
+
+## 2️⃣ 코드 설명
+### **1. 자동로그인 설정**<br>
+#### **selector로 자동로그인 버튼 만들어주고 SharedPreferences 활용해서 로그인 정보 활용하기**<br>
+- SeminarSharedPreferences.kt
+```kotlin
+//자동로그인 설정하기
+    fun setAutoLogin(context: Context, value: Boolean) {
+        context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE).edit()
+            .putBoolean(AUTO_LOGIN, value)
+            .apply()
+    }
+```
+```kotlin
+//자동로그인 설정 여부 정보 가져오기
+fun getAutoLogin(context: Context): Boolean {
+        return context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)
+            .getBoolean(AUTO_LOGIN, false)
+    }
+```
+- SignInActivity.kt
+```kotlin
+//자동로그인 버튼 눌렀을 때 자동로그인 설정
+    private fun initClickEvent() {
+        binding.ibCheckbox.setOnClickListener {
+            binding.ibCheckbox.isSelected = !binding.ibCheckbox.isSelected
+
+            SeminarSharedPreferences.setAutoLogin(this, binding.ibCheckbox.isSelected)
+        }
+    }
+```
+```kotlin
+//자동로그인 설정되었을 때 저장된 정보를 바탕으로 메세지 띄우고 바로 홈 화면으로 이동
+    private fun isAutoLogin() {
+        if (SeminarSharedPreferences.getAutoLogin(this)) {
+            Toast.makeText(this@SignInActivity, "자동로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@SignInActivity, HomeActivity::class.java))
+            finish()
+        }
+    }
+
+```
+
+### **2. 자동로그인 해제 설정 화면**<br>
+#### **SettingsActivity.kt를 만들어 Home에서 Intent를 통해 넘어가도록 설정**<br>**
+- **HomeActivity.kt**
+```kotlin
+//설정 버튼 누르면 SettingsActivity로 이동
+  private fun initSettingClickEvent() {
+        val Intent = Intent(this, SettingsActivity::class.java)
+        binding.ivSetting.setOnClickListener {
+            startActivity(Intent)
+        }
+    }
+```
+- **SettingsActivity.kt**
+```kotlin
+//자동로그인 해제 버튼 누르면 저장된 정보 지워서 자동로그인 해제
+    private fun isAutoLogout() {
+        binding.btnAutoOff.setOnClickListener {
+            SeminarSharedPreferences.setLogout(this)
+            Toast.makeText(this@SettingsActivity, "자동로그인이 해제되었습니다.", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@SettingsActivity, SignInActivity::class.java))
+            finish()
+        }
+    }
+```
+
+## 3️⃣ 과제를 통해 배운 내용
+
+  💡 자동로그인 해제를 구현하는 과정에서 <code>setOnClickListener</code>가 작동하지 않아 헤맸는데 <code>setContentView(R.~~~)</code>가 아닌 <code>setContentView(binding.root)</code>로 수정하자 해결됨. 바인딩뷰를 썼기 때문에 객체화된 뷰를 넘겨주어야 해서 <code>binding.root</code>를 사용해야 하는 것이라는 걸 배움.<br>
+
+  💡 SharedPreferences를 활용해 로컬 저장소의 정보를 활용하는 연습을 함.<br>
+
+  💡 SharedPreferences 파일에서 preferences 변수를 설정해서 하면 에러가 나서 변수를 없애고 직접 반환값에 <code>context.getSharedPreferences(STORAGE_KEY, Context.MODE_PRIVATE)</code> 이런 식으로 넣어주니 해결되었는데 아직 이유를 잘 모르겠다!😥
+  * * *
